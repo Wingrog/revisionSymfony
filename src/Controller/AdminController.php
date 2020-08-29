@@ -31,13 +31,13 @@ class AdminController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            //ENCODAGE DU MOT DE PASS
             $user->setPassword(
                 $encoder->encodePassword(
                     $user,
                     $form->get('password')->getData()
                 )
             );
-
 
             //TRAITEMENT DE L'UPLOAD DE L'IMAGE
 
