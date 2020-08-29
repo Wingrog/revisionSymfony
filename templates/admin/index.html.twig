@@ -18,7 +18,7 @@
 </style>
 
 <div class="container col-10">
-    <h1>Gestion des salariés</h1>
+    <h1 class="mb-5">Gestion des salariés</h1>
     <a class="btn btn-success" href="{{ path('admin_add') }}">Ajouter un salarié</a>
     <table class="table table-dark table-striped">
         <thead>
@@ -59,7 +59,7 @@
 
                     {# Bouton de supression avec alerte de confirmation ! #}
                     <a class="btn btn-danger" href="{{ path('delete_user', {'user': user.id }) }}"
-                        onclick="return confirm('Êtes vous sure de bien vouloir supprimer ?')">delete</a>
+                        onclick="return confirm('Êtes vous sure de bien vouloir supprimer ?')">Supprimer</a>
 
                 </td>
             </tr>
