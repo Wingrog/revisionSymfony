@@ -96,7 +96,7 @@ class AdminController extends AbstractController
     // POUR MODIFIER DANS LA BASE DE DONNEE AVEC UNE IMAGE EN UPLOAD
 
     /**
-     * @Route("/admin/update/{user}", name="update_admin")
+     * @Route("/admin/update/{user}", name="update_user")
      */
     public function update(User $user, Request $request, SluggerInterface $slugger)
     {

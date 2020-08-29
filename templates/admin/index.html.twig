@@ -55,7 +55,7 @@
                     <img width="150px" height="auto" src="{{ asset('images/upload/' ~ user.photo)}}">
                 </td>
                 <td>
-                    <a class="btn btn-warning" href="{{ path('update_admin', {'user' : user.id }) }}">Editer</a>
+                    <a class="btn btn-warning" href="{{ path('update_user', {'user' : user.id }) }}">Editer</a>
 
                     {# Bouton de supression avec alerte de confirmation ! #}
                     <a class="btn btn-danger" href="{{ path('delete_user', {'user': user.id }) }}"
