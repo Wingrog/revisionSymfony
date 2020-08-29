@@ -56,7 +56,11 @@
                 </td>
                 <td>
                     <a class="btn btn-warning" href="{{ path('update_admin', {'user' : user.id }) }}">Editer</a>
-                    <a class="btn btn-danger" href="{{ path('delete_user', {'user' : user.id }) }}">Supprimer</a>
+
+                    {# Bouton de supression avec alerte de confirmation ! #}
+                    <a class="btn btn-danger" href="{{ path('delete_user', {'user': user.id }) }}"
+                        onclick="return confirm('Êtes vous sure de bien vouloir supprimer ?')">delete</a>
+
                 </td>
             </tr>
             {% endfor %}
