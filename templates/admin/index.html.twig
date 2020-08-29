@@ -58,8 +58,11 @@
                     <a class="btn btn-warning" href="{{ path('update_user', {'user' : user.id }) }}">Editer</a>
 
                     {# Bouton de supression avec alerte de confirmation ! #}
+                    <!-- Le compte administrateur ne peux pas être supprimé -->
+                    {% if user.secteur != 'Administration' %}
                     <a class="btn btn-danger" href="{{ path('delete_user', {'user': user.id }) }}"
                         onclick="return confirm('Êtes vous sure de bien vouloir supprimer ?')">Supprimer</a>
+                    {% endif %}
 
                 </td>
             </tr>
