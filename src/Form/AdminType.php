@@ -61,15 +61,17 @@ class AdminType extends AbstractType
                     'Comptabilité' => 'Comptabilité',
                 ],
             ])
-            // Pas obligatoire mais on peut attribuer un role depuis le formulaire comme cela
-            ->add('roles', ChoiceType::class, [
-                'choices' => [
-                    'Salarié' => 'ROLE_SALARIE',
-                    'Secretaire' => 'ROLE_ADMIN'
-                ],
-                'multiple' => true,
-                'expanded' => true
-            ])
+            // Pas obligatoire mais on peut attribuer des rôles comme cela
+
+            // ->add('roles', ChoiceType::class, [
+            //     'choices' => [
+            //         'Salarié' => 'ROLE_SALARIE',
+            //         'Secretaire' => 'ROLE_ADMIN'
+            //     ],
+            //     'multiple' => true,
+            //     'expanded' => true
+            // ])
+
             ->add('photo', FileType::class, [
                 'label' => 'Image (JPG)',
                 'mapped' => false,
