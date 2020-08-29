@@ -83,10 +83,13 @@ class AdminController extends AbstractController
     public function index(UserRepository $userRepository)
     {
         $users = $userRepository->findAll();
+        $nbUser = $userRepository->count([]);
+
 
         return $this->render('admin/index.html.twig', [
             'controller_name' => 'AdminController',
-            'users' => $users
+            'users' => $users,
+            'nbUser' => $nbUser
         ]);
     }
 
