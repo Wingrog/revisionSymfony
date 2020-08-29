@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Editer une activitée !{% endblock %}
+{% block title %}Editer un salarié !{% endblock %}
 
 {% block body %}
 <style>
@@ -19,7 +19,7 @@
 
 
 {# J'affiche mon formulaire #}
-<h1 class="mb-3">Editer un salarié {{user}}</h1>
+<h1 class="mb-3">Editer le salarié {{ user.nom }} - {{ user.prenom }}</h1>
 
 {{ form_start(form) }}
 {{ form_end(form) }}

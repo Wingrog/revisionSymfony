@@ -29,8 +29,8 @@ class UserFixtures extends Fixture
 
         $user = new User();
         $user->setEmail('admin@deloitte.com');
-        $user->setNom('Admin');
-        $user->setPrenom('Admin');
+        $user->setNom('Delorme');
+        $user->setPrenom('Aurelien');
         $user->setPhoto('admin.jpg');
         $user->setRoles(['ROLE_ADMIN']);
         $user->setSecteur('Administration');

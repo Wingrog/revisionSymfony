@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Gestion des salariés!{% endblock %}
 
 {% block body %}
 <style>
@@ -36,15 +36,15 @@
             {% for user in users %}
 
             {% if user.secteur == 'Direction' %}
-            <tr style="background-color : #f6a4ac">
+            <tr class="bg-dark">
                 {% elseif user.secteur == 'Recrutement' %}
-            <tr style="background-color : #a4f6aa">
+            <tr class="bg-primary">
                 {% elseif user.secteur == 'Informatique' %}
-            <tr style="background-color : #fcea90">
+            <tr class="bg-info">
                 {% elseif user.secteur == 'Comptabilité' %}
-            <tr style="background-color : #a4aaf6">
+            <tr class="bg-success">
                 {% else %}
-            <tr style="background-color : #000000">
+            <tr style="background-color:darkviolet">
                 {% endif %}
 
                 <td>{{user.email}}</td>
