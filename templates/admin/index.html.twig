@@ -52,7 +52,7 @@
                 <td>{{user.prenom}}</td>
                 <td>{{user.secteur}}</td>
                 <td>
-                    <img width="100px" height="auto" src="{{ asset('images/upload/' ~ user.photo)}}">
+                    <img width="150px" height="auto" src="{{ asset('images/upload/' ~ user.photo)}}">
                 </td>
                 <td>
                     <a class="btn btn-warning" href="{{ path('update_admin', {'user' : user.id }) }}">Editer</a>
