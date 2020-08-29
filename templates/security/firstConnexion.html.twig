@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+{% for flashError in app.flashes('verify_email_error') %}
+<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+{% endfor %}
+
+<div class="container text-center">
+    <h1>Première connexion</h1>
+    <h5 class="mb-3">Vous devez modifier votre mot de pass</h5>
+    {{ form_start(firstConnexion) }}
+    {{ form_row(firstConnexion.plainPassword, {
+            label: 'Password'
+        }) }}
+
+    <button class="btn btn-success" type="submit" class="btn">Modifier le mot de pass</button>
+    {{ form_end(firstConnexion) }}
+</div>
+{% endblock %}

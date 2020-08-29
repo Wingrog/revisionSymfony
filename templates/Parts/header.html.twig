@@ -1,0 +1,37 @@
+            <div class="text-center mt-3 mb-5">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <a class="navbar-brand" href="#">Delloite</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ path('default') }}">Home</a>
+                            </li>
+
+                            {# SI L'UTILISATEUR N'EST PAS CONNECTE #}
+                            {% if app.user is null %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_login') }}">Se connecter</a>
+                            </li>
+                            {% endif %}
+
+                            <!-- SI L'UTILISATEUR EST ADMIN -->
+                            {% if app.user is not null and 'ROLE_ADMIN' in app.user.roles %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ path('admin') }}">Gestion des salariés</a>
+                            </li>
+                            {% endif %}
+
+                            {# SI L'UTILISATEUR EST CONNECTE #}
+                            {% if app.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
