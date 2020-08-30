@@ -85,7 +85,7 @@ class AdminType extends AbstractType
                         'mimeTypes' => [
                             'image/jpeg',
                         ],
-                        'mimeTypesMessage' => 'Please upload a valid JPG',
+                        'mimeTypesMessage' => 'Seul le format JPG est accepté',
                     ])
                 ],
             ])
