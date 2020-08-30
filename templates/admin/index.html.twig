@@ -66,6 +66,7 @@
                     <img width="150px" height="auto" src="{{ asset('images/upload/' ~ user.photo)}}">
                 </td>
                 <td>
+                    <a class="btn btn-primary" href="{{ path('user_getone', {'id' : user.id }) }}">Détail</a>
                     <a class="btn btn-warning" href="{{ path('update_user', {'user' : user.id }) }}">Editer</a>
 
                     {# Bouton de supression avec alerte de confirmation ! #}

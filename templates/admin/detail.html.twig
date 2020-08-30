@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail du salarié{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Détail du salarié</h1>
+    <h5 class="font-weight-bold">{{ user.nom | upper }} - {{ user.prenom | upper }}</h5><br>
+
+    <img width="300px" height="auto" src="{{ asset('images/upload/' ~ user.photo) }}"><br><br>
+
+    <p class="mt-3">Nom : {{user.nom}}</p>
+    <p class="mt-3">Prénom : {{user.prenom}}</p>
+    <p class="mt-3">Adresse e-mail : {{user.email}}</p>
+    <p class="mt-3">Secteur : {{user.secteur}}</p>
+    <p class="mt-3">A déjà modifié son mot de pass : {{ user.redefinePassword ? 'Oui' : 'Non' }}</p>
+
+    <a class="btn btn-success" href="{{ path('admin') }}">Retour à la liste des salariés</a><br>
+
+
+
+</div>
+{% endblock %}

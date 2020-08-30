@@ -77,6 +77,21 @@ class AdminController extends AbstractController
     }
 
 
+    // POUR AFFICHER LE DETAIL
+
+    /**
+     * @Route("/admin/detail/{id}", name="user_getone")
+     */
+    public function getOne($id)
+    {
+        $user = $this->getDoctrine()->getRepository(User::class)->find($id);
+
+        return $this->render('admin/detail.html.twig', [
+            'user' => $user,
+        ]);
+    }
+
+
     /**
      * @Route("/admin", name="admin")
      */
