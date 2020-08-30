@@ -17,7 +17,7 @@
     }
 </style>
 <div class="text-center">
-    <h1>Bienvenue :)</h1>
+    <h1>Bienvenue {{ app.user.nom }} - {{ app.user.prenom }}</h1>
     <h3>Tu es connecté sous {{ app.user.email }}</h3>
     <h5>Tu fais partis du secteur {{ app.user.secteur }}</h5>
 </div>
